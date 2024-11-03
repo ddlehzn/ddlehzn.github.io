@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style3.css">
+        <body>
+            <nav>
+                <ul class="sidebar">
+                <li onclick=hideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"/></svg></a></li>
+                <li><a href="#">Upload</a></li>
+                <li><a href="#">Change Email/Password</a></li>
+                <li onclick=logout()><a href="index.html">Log Out</a></li>
+                </ul>
+                <ul>
+                <li><a href="#">Paw Control</a></li>
+                <li onclick=showBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg></a></li>
+                </ul>
+            </nav>
+            <script>
+                function showBar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display= 'flex'
+                }
+                function hideBar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display= 'none'
+                }
+                function logout(){
+                window.location.href = 'index.html';
+                }
+
+            </script>
+        </body>
+    </head>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Control Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            Welcome to Paw Control
+        </div>
+    </header>
+    <section class="login">
+        <div class="container">
+            <form action="home.html" method="GET">
+                <h1>Login</h1>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button onclick="validateForm()" type="submit">Login</button>
+
+                <p>Don't have an account? </p>
+                <a href="register.html">Register Now</a>
+            </form>
+        </div>
+    </section>
+    <script>
+        function validateForm() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === '' || password === '') {
+                alert('Please fill in both fields.');
+                return false;
+            }
+
+            window.location.href = 'home.html';
+        }
+    </script>
+</body>
+</html>
