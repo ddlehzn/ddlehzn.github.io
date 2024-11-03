@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -7,38 +7,31 @@ body {
     margin: 0;
     background-color: #E3D4AD;
 }
-
-
-@media only screen and (min-width: 576px){
-    .body{
+@media only screen and (min-width: 576px) {
+    .body {
         width: 540px;
     }
 }
-
-@media only screen and (min-width: 1200px){
-    .body{
+@media only screen and (min-width: 1200px) {
+    .body {
         width: 1140px;
     }
 }
-
-nav  {
+nav {
     background-color: #55461D;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
-
-nav ul{
+nav ul {
     width: 100%;
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-
-nav li{
+nav li {
     height: 50px;
 }
-
-nav a{ 
+nav a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -46,16 +39,13 @@ nav a{
     align-items: center;
     color: white;
 }
-
-nav a:hover{
+nav a:hover {
     background-color: #f0f0f0;
 }
-
-nav li:first-child{
+nav li:first-child {
     margin-right: auto;
 }
-
-.sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     right: 0;
@@ -69,13 +59,78 @@ nav li:first-child{
     align-items: flex-start;
     justify-content: flex-start;
 }
-
-nav svg{
+nav svg {
     fill: white;
 }
-
-@media (max-width: 450px){
-    .sidebar{
+@media (max-width: 450px) {
+    .sidebar {
         width: 100%;
     }
+    dialog {
+        width: 90%;
+        height: 50vh;
+    }
+    .post-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.50);
+}
+dialog {
+    width: 80%;
+    max-width: 600px;
+    height: 60%;
+    margin: auto;
+    padding: 0px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 30px;
+    position: fixed;
+    text-align: center;
+}
+dialog .wrapper {
+    padding: 50px;
+    margin: auto;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type="text"],
+input[type="tel"] {
+    width: 87%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+input[type="file"]{
+    display: none
+}
+button {
+    width: auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    text-align: center;
+    align-self: right;
+}
+dialog .button:hover {
+    background-color: black;
+    color: white;
+}
+h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.post-icon {
+    display: block;
+    margin: 15px auto;
+    width: 32px;
+    height: 32px;
+    text-align: left;
 }
